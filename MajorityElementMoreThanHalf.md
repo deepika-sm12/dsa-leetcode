@@ -1,4 +1,4 @@
-# [Leetcode 169: Majority Element](https://leetcode.com/problems/majority-element/) [Easy]
+# [Leetcode 169: Majority Element](https://leetcode.com/problems/majority-element/) [Array] [Easy]
 
 ## Problem Statement:
 Given an array nums of size n, return the majority element.
@@ -26,31 +26,30 @@ Output: 2
 4. If count hits zero, pick the next number as candidate.
 
 **The majority element can’t be canceled out completely, so it remains at the end.**
-```java
-class MajorityElementMoreThanHalf {
-    public int majorityElement(int[] nums) {
-        int majorityElement = nums[0];
-        int count = 0;
-        for(int num: nums) {
-            if(num == majorityElement) {
-                count++;
-            } else {
-                if(count == 0) {
-                    majorityElement = num;
-                    count++;
-                } else {
-                    count--;
-                }
-            }
-        }
-        return majorityElement;
-    }
-}
-```
 
-### Time Complexity: 
+### Time Complexity:
 **O(n)** - array is parsed only once
 
 ### Space Complexity:
 **O(1)** - keeps track of a few variables (like candidate(s) and counters), regardless of the input size, it uses constant space
+
+```java
+public int majorityElement(int[] nums) {
+    int majorityElement = nums[0];
+    int count = 0;
+    for(int num: nums) {
+        if(num == majorityElement) {
+            count++;
+        } else {
+            if(count == 0) {
+                majorityElement = num;
+                count++;
+            } else {
+                count--;
+            }
+        }
+    }
+    return majorityElement;
+}
+```
 
