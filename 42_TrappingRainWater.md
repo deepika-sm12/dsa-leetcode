@@ -5,7 +5,7 @@ Given n non-negative integers representing an elevation map where the width of e
 
 **Example 1:**
 
-![Example1](static/rainwatertrap.png)
+![Example1](static/rainWaterTrap.png)
 
 _Input_: height = [0,1,0,2,1,0,1,3,2,1,2,1]
 
